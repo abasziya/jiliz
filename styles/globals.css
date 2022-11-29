@@ -24,3 +24,527 @@ a {
     background: black;
   }
 }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+@font-face {
+  font-family: "iransans";
+  src: url("../public/font/iransans.eot");
+  src: url("../public/font/iransans.woff") format("woff"),
+    url("../public/font/iransans.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: iransans;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  direction: rtl;
+}
+
+/* Header */
+
+header {
+    border-bottom: 10px green solid ;
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    position: fixed;
+    width: 82%;
+    background: rgb(255, 255, 255);
+    top: 0px;
+    z-index: 500;
+    right: 127px;
+    border-radius: 10px;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+    transition: 0.5s;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+header.scroll {
+    height: 69px;
+  background-color: #ffffff;
+  color: black;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+}
+
+header.scroll  .header-right-side {
+  background-color: #F4F2F2;
+ }
+header.scroll  .header-right-side a{
+  padding: 20px px;
+ }
+ header.scroll  .header-left-side {
+  padding: 20px 50px;
+ }
+
+
+header .menu-svg {
+  display: none;
+}
+
+.header-right-side {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: nowrap;
+  align-content: flex-end;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+.header-right-side .close-svg {
+  display: none;
+}
+.header-right-side a {
+  padding: 8px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #000228;
+}
+
+.header-right-side.scroll a {
+  color: rgb(0, 0, 0);
+}
+
+.header-right-side a:hover {
+  color: #fcc31a;
+  cursor: pointer;
+}
+
+.header-right-side img {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.header-left-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left-side a {
+  padding: 12px 20px;
+  border: 2px #0094df solid;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 25px;
+  transition: 0.5s;
+  margin-left: 30px;
+  color: #000228;
+}
+header .header-left-side a:hover {
+  background-color: #000228;
+  color: white;
+  cursor: pointer;
+}
+
+.header-left-side a.scroll {
+  color: white;
+  border: 2px white solid;
+}
+
+.header-left-side a.scroll:hover {
+  background-color: #fcc31a;
+  color: #000228;
+}
+
+.search {
+  position: relative;
+}
+.search svg {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.search input {
+  padding: 10px 10px;
+  border-radius: 25px;
+  width: 40px;
+  border: 2px #0094df solid;
+  transition: 1s;
+  cursor: pointer;
+}
+.search input.scroll {
+  border: 2px white solid;
+  outline: none;
+}
+
+@media (max-width: 992px) {
+  header .menu-svg {
+    display: block;
+    cursor: pointer;
+  }
+  .header-right-side {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    background-color: #E7E7E7;
+    
+    z-index: 100;
+    overflow: auto;
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+  }
+
+  .header-right-side.active {
+    right: 0;
+  }
+
+  .header-right-side .close-svg {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0px;
+    z-index: 5;
+    fill: #005783;
+    cursor: pointer;
+  }
+  .header-right-side img {
+    width: 90px;
+    margin-bottom: 70px;
+    margin-top: 30px;
+  }
+  .header-right-side a {
+    width: 100%;
+    background-color: #E7E7E7;
+    text-align: center;
+    padding: 17px 30px;
+    background-color: #00a0f0;
+    color: black;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  .header-right-side a:hover {
+    background-color: #000670;
+    color: white;
+  }
+  .header-right-side.active a {
+    opacity: 1;
+    padding-right: 119px;
+    transform: translateY(0px);
+    transition-property: transform, opacity;
+    transition-duration: 1s, 1s;
+    transition-timing-function: ease-out, ease-out;
+    transition-delay: calc(var(--i) * 0.2s), calc(var(--i) * 0.2s);
+  }
+}
+
+@media (max-width: 560px) {
+  .header-right-side {
+
+    width: 100%;
+  }
+}
+.black-div{
+    background-color: #4A4A4A;
+margin-bottom: 20px;
+}
+.first-nav{
+    display: flex;
+   
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.menu-search-wrap{
+    display: inline;
+}
+
+.innerabave{
+
+    display: inline;
+}
+@media (max-width: 566px) {
+header{
+
+  right: 50px;
+}
+
+
+
+
+}
+.middle{
+  display: flex;
+
+    z-index: 1000;
+    top: 10px;
+    flex-wrap: nowrap;
+  right: 0px;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+}
+.innerabove{
+
+  color:#666666;
+  text-decoration: none;
+  padding: 12px 70px;
+  background-color: #E7E7E7;
+}
+.header-right-side a{
+  background-color: #F4F2F2;
+  width: 100%;
+  text-align: center;
+  padding: 17px 80px;
+
+  color: black;
+  
+ 
+}
+@media (max-width: 1200px) {
+  .header-right-side a {
+
+    padding: 17px 50px;
+  }
+}
+
+
+.active-a{
+background-color: white;
+
+color:#6A7E09;
+text-decoration: none;
+padding: 12px 70px;
+}
+
+.dropbtn {
+  background-color: F4F2F2;
+  color: rgb(0, 0, 0);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+  .dropdown-menu  {
+
+
+  background-color: #417E09;
+
+
+
+}
+@media screen and (max-width: 1700px) and (min-width: 600px) {
+  .middle{
+    display: none;
+  }
+  .header-right-side a{
+    padding: 17px 0px;
+  }
+  .header-right-side{
+    background-color: #F4F2F2;
+  }
+  .header-left-side{
+    margin-left: 20px;
+  }
+
+}
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .middle{
+    display: none;
+  }
+  .header-right-side a{
+    padding: 17px 0px;
+  }
+}
+@media screen and (max-width: 600px) and (min-width: 300px) {
+  .middle{
+    display: none;
+  }
+  .header-right-side a{
+    padding: 17px 0px;
+  }
+  
+}
