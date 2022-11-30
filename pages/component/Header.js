@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import "../../styles/bootstrap.css"
 const Header = () => {
 
 
@@ -68,32 +70,80 @@ setisnavactive(true)
      
       <nav   className = { isActive ? 'scroll  header-right-side   ': "header-right-side  "} >
          <div className={isnavactive ? 'scroll  header-right-side active ' : '' } >
-         <button onClick={closebtn} className= {isnavactive ? 'close-btn' : 'close-btn-none' } ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style={{backgroundcolor:"black"}} class="bi bi-x-lg" viewBox="0 0 16 16">
+         <button onClick={closebtn} className= {isnavactive ? 'close-btn ' : 'close-btn-none' } ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style={{backgroundcolor:"black"}} class="bi bi-x-lg" viewBox="0 0 16 16">
     <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
   </svg></button> 
   
         
-        <Link  href="/" >صفحه اصلی</Link>
-        <Link href="/weblog">وبلاگ</Link>
-        <Link href="/learn">آموزش</Link>
-        <Link href="/portofolio ">نمونه کارها</Link>
-        <Link href="/aboutus">درباره ما</Link>
-   
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <Link legacyBehavior href="/">  صفحه  اصلی  </Link>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+           
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <Link  href="/weblog">  لوازم کافه و رستوران</Link>
+
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+           
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <Link href="/learn">   خوراک و نوشیدنی  </Link>
+          
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+           
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          
+        <Link href="/portofolio " >  قطعات و خات دم </Link>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+           
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <Link href="/aboutus">درباره ما</Link>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+           
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
          </div>
       </nav>
   
       <div className="header-left-side">
-        <a className={isActive ? 'scroll' : ''}>استخدام و کارآموزی</a>
-  
-        <label className={isActive ? ' search scroll' : 'search'} >
-          {/* <svg fill="#000228" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="124.524px" height="124.524px"
-            viewBox="0 0 124.524 124.524" style="enable-background:new 0 0 124.524 124.524;" xml:space="preserve">
-            <path d="M51,102.05c10.5,0,20.2-3.2,28.3-8.6l29.3,29.3c2.301,2.3,6.101,2.3,8.5,0l5.7-5.7c2.3-2.3,2.3-6.1,0-8.5L93.4,79.35
-                      c5.399-8.1,8.6-17.8,8.6-28.3c0-28.1-22.9-51-51-51c-28.1,0-51,22.9-51,51C0,79.149,22.8,102.05,51,102.05z M51,20.05
-                      c17.1,0,31,13.9,31,31c0,17.1-13.9,31-31,31c-17.1,0-31-13.9-31-31C20,33.95,33.9,20.05,51,20.05z" />
-          </svg> */}
-          <input type="text" />
-        </label>
+
+     <Image src="/images/logo-v2.svg" width={200} height={80} /> 
+            
+       
       </div>
 
 

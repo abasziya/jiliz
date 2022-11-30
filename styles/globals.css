@@ -177,17 +177,16 @@ body {
 /* Header */
 
 header {
-    border-bottom: 10px green solid ;
+    border-bottom: 10px rgb(245, 11, 11) solid ;
     grid-area: header;
     display: flex;
     justify-content: space-around;
-    height: 100px;
+    height: 127px;
     position: fixed;
-    width: 82%;
+    width: 85%;
     background: rgb(255, 255, 255);
     top: 0px;
     z-index: 500;
-    right: 127px;
     border-radius: 10px;
     border-bottom-left-radius:20px ;
     border-bottom-right-radius:20px ;
@@ -222,6 +221,7 @@ header .menu-svg {
 
 .header-right-side {
   display: flex;
+  background-color: #F4F2F2;
   align-items: center;
   width: 100%;
   flex-wrap: nowrap;
@@ -258,12 +258,13 @@ header .menu-svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #F4F2F2;
 }
 .header-left-side a {
   padding: 12px 20px;
   border: 2px #0094df solid;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 70;
   border-radius: 25px;
   transition: 0.5s;
   margin-left: 30px;
@@ -327,7 +328,7 @@ header .header-left-side a:hover {
     flex-direction: column;
     width: 100%;
     height: 90%;
-    background-color: #E7E7E7;
+    background-color: #F4F2F2;
     
     z-index: 100;
     overflow: auto;
@@ -410,7 +411,7 @@ margin-bottom: 20px;
 @media (max-width: 566px) {
 header{
 
-  right: 50px;
+  right: 0px;
 }
 
 
@@ -521,7 +522,7 @@ padding: 12px 70px;
     display: none;
   }
   .header-right-side a{
-    padding: 17px 0px;
+    padding: 17px 45px;
   }
   .header-right-side{
     background-color: #F4F2F2;
@@ -536,7 +537,7 @@ padding: 12px 70px;
     display: none;
   }
   .header-right-side a{
-    padding: 17px 0px;
+    padding: 17px 45px;
   }
 }
 @media screen and (max-width: 600px) and (min-width: 300px) {
@@ -544,7 +545,44 @@ padding: 12px 70px;
     display: none;
   }
   .header-right-side a{
-    padding: 17px 0px;
+    padding: 17px 20px;
   }
   
+}
+.close-btn-none{
+
+  display: none;
+}
+.close-btn{
+   
+
+  top:0%;
+ 
+
+  right: 1px;
+    display: block;
+    color: black;
+    position: relative;
+}
+.menu {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  text-decoration: none;
+}
+.menu-item {
+  cursor: pointer;
+  padding: 5px;
+  height: 28px;
+  border-bottom: 1px solid rgb(187, 187, 187);
+  text-decoration: none
+}
+.menu-item:hover {
+  color: #2980b9;
+  text-decoration: none
+}
+.container{
+  display: flex;
+  justify-content: center;
 }
