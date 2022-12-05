@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import "../../styles/bootstrap.css"
+
 const Header = () => {
 
 
@@ -24,18 +24,20 @@ useEffect(()=>{
   window.addEventListener("scroll", (ref) => {
     
     
-    
-    if (window.scrollY <= 30) {
+
+    if (window.scrollY <= 100) {
       
-      setIsActive(true);
+      setIsActive();
       
 
-      console.log("hkuygjdh")
+      // console.log(window.screenY)
       
     }else if(window.scrollY >= 80) {
       
-      setIsActive(false);
-      console.log(">-80")
+      setIsActive(true);
+      // console.log(">-80")
+    }else if(window.screenY>=300){
+      console.log("fuuuuuuuuclk")
     }
   });
   
@@ -70,70 +72,70 @@ setisnavactive(true)
      
       <nav   className = { isActive ? 'scroll  header-right-side   ': "header-right-side  "} >
          <div className={isnavactive ? 'scroll  header-right-side active ' : '' } >
-         <button onClick={closebtn} className= {isnavactive ? 'close-btn ' : 'close-btn-none' } ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style={{backgroundcolor:"black"}} class="bi bi-x-lg" viewBox="0 0 16 16">
+         <button onClick={closebtn} className= {isnavactive ? 'close-btn ' : 'close-btn-none' } ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style={{backgroundcolor:"black"}} className="bi bi-x-lg" viewBox="0 0 16 16">
     <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
   </svg></button> 
   
         
         
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <Link legacyBehavior href="/">  صفحه  اصلی  </Link>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         صفحه  اصلی 
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+          <ul className="dropdown-menu">
+            <li> <Link  href="/">  صفحه  اصلی  </Link></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
            
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <Link  href="/weblog">  لوازم کافه و رستوران</Link>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           لوازم کافه و رستوران
 
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+          <ul className="dropdown-menu">
+            <li><Link  href="/weblog">  لوازم کافه و رستوران</Link></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
            
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <Link href="/learn">   خوراک و نوشیدنی  </Link>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         خوراک و نوشیدنی  
           
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+          <ul className="dropdown-menu">
+            <li><Link href="/learn">   خوراک و نوشیدنی  </Link></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
            
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
 
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           
-        <Link href="/portofolio " >  قطعات و خات دم </Link>
+        قطعات و خات دم 
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+          <ul className="dropdown-menu">
+            <li> <Link href="/portofolio " >  قطعات و خات دم </Link></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
            
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <Link href="/aboutus">درباره ما</Link>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               درباره ما
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+          <ul className="dropdown-menu">
+            <li> <Link href="/aboutus">درباره ما</Link></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
            
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
          </div>
@@ -141,12 +143,12 @@ setisnavactive(true)
   
       <div className="header-left-side">
 
-     <Image src="/images/logo-v2.svg" width={200} height={80} /> 
+     <Image src="/images/logo-v2.svg"  alt='logo' width={200} height={80} /> 
             
        
       </div>
 
-
+      
     </header>
   
   </>

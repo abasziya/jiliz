@@ -1,0 +1,141 @@
+.container{
+    position: relative;
+}
+.imageHeader{
+    margin-top: 125px;
+    display: flex;
+    justify-content: center;
+}
+
+.mainpic{
+    width: 100%;
+    height: 500px;
+}
+.mainpage{
+width: 100%;
+    height: 200px; 
+direction: rtl;
+    display: flex;
+flex-wrap: wrap;
+align-content: center;
+justify-content: space-around;
+
+
+justify-content: space-around;
+}
+.sidebar{
+
+    width: 15%;
+    height: 700px;
+    right: 12px;
+    position: absolute;
+    margin-top: 403px;
+}
+.insidenav{
+    position: absolute;
+    padding: 27px;
+    padding-top: 10px;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    background-color: #e2dddc;
+}
+    
+
+.insidenavactive{
+    position: fixed;
+    top: 98px;
+    padding: 27px;
+    padding-top: 10px;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    background-color: #e2dddc;
+}
+
+
+.filterselect{
+    
+    width: 240px;
+    height: 42px;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 16px;
+}
+.Products {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    border: 2px solid #ffffff;
+    margin-bottom: 20px;
+    background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 7px 0px #b25d5d;
+ padding: 50px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    }
+    
+    .images {
+
+
+        width: 200px;
+        height: 200px;
+        border-radius: 15px;
+        
+        }
+
+
+.productcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+ 
+    width: 77%;
+    margin-right: 11%;
+
+
+    margin-top: 137%;
+    justify-content: space-around;
+
+       
+        }
+
+
+.Ptitle{
+    text-align: center;
+}
+.fillterbox{
+    text-align: center;
+    border-bottom: 0.5px solid black;
+    margin-bottom: 10px;
+}
+.aboutProduct{
+display: block;
+} 
+ 
+.oveley{ 
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   border-top-left-radius: 35px;
+   border-top-right-radius: 35px;
+    width: 100%;
+    height: 66px;
+    transition: .5s ease;
+}
+.Products:hover .oveley{
+
+
+    opacity: 1;
+  background-color: #f1f1f1;
+  transform: scale(1.01);
+height: 50%;
+}
