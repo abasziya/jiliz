@@ -98,7 +98,6 @@ console.log(nav)
 
 
 
-
   {apiData.map((item,index)=>
   <div key={index} className={styles.Products} >
     
@@ -110,7 +109,7 @@ console.log(nav)
 
       <div className={styles.overley }>
       
-      <p   >{item.description}</p>
+      <p  >{item.description}</p>
  
       </div>
 
@@ -132,7 +131,7 @@ console.log(nav)
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
-
+                  
 </select>
   
 <select className={styles.filterselect} >
@@ -193,7 +192,7 @@ console.log(nav)
 
 </select>
 <select className={styles.filterselect} >
-      <option> کشور سازنده  </option>
+      <option> قیمت</option>
       <option value="1">المان  </option>
       <option value="2"> اروپا  </option>
       <option value="2"> امریکا   </option>

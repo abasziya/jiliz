@@ -35,9 +35,8 @@ justify-content: space-around;
     position: absolute;
     padding: 27px;
     padding-top: 10px;
-    border-top-left-radius: 75px;
-    border-top-right-radius: 75px;
-    background-color: #e2dddc;
+ 
+    background-color: #41454A;
 }
     
 
@@ -46,9 +45,8 @@ justify-content: space-around;
     top: 98px;
     padding: 27px;
     padding-top: 10px;
-    border-top-left-radius: 75px;
-    border-top-right-radius: 75px;
-    background-color: #e2dddc;
+ 
+    background-color: #41454A;
 }
 
 
@@ -116,7 +114,7 @@ justify-content: space-around;
 display: block;
 } 
  
-.oveley{ 
+.overley{ 
     
     position: absolute;
     bottom: 0;
@@ -131,7 +129,7 @@ display: block;
     height: 66px;
     transition: .5s ease;
 }
-.Products:hover .oveley{
+.Products:hover .overley{
 
 
     opacity: 1;

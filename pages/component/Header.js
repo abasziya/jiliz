@@ -33,12 +33,13 @@ useEffect(()=>{
       // console.log(window.screenY)
       
     }else if(window.scrollY >= 80) {
-      
+       
       setIsActive(true);
       // console.log(">-80")
     }else if(window.screenY>=300){
       console.log("fuuuuuuuuclk")
     }
+
   });
   
 })
@@ -89,18 +90,7 @@ setisnavactive(true)
             <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           لوازم کافه و رستوران
-
-          </a>
-          <ul className="dropdown-menu">
-            <li><Link  href="/weblog">  لوازم کافه و رستوران</Link></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-           
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
+        
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
          خوراک و نوشیدنی  
@@ -134,15 +124,17 @@ setisnavactive(true)
           <ul className="dropdown-menu">
             <li> <Link href="/aboutus">درباره ما</Link></li>
             <li><a className="dropdown-item" href="#">Another action</a></li>
-           
+              
             <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+
          </div>
       </nav>
   
       <div className="header-left-side">
-
+        <ul className='dropdown-item'  ><li> <Link href="/makeadvertise"> ثبت تبلیغ </Link></li></ul>
+        <ul className='dropdown-item'    ><li> <Link href="/register">   ثبت نام   </Link></li></ul>
      <Image src="/images/logo-v2.svg"  alt='logo' width={200} height={80} /> 
             
        
