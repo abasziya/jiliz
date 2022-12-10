@@ -80,19 +80,21 @@ setisnavactive(true)
         
         
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+     
+          
+          <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="true">
          صفحه  اصلی 
           </a>
           <ul className="dropdown-menu">
-            <li> <Link  href="/">  صفحه  اصلی  </Link></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li  > <Link className='d-item'   href="/">   صفحه  اصلی  </Link></li>
+            <li> <Link className='d-item'   href="/Aval">  2 صفحه  اصلی  </Link></li>
            
             <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
         
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a className="nav-link dropdown-toggle" href="#" role="button" >
          خوراک و نوشیدنی  
           
           </a>

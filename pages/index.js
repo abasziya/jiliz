@@ -14,6 +14,9 @@ export default function Home() {
     <HomePage >
       
     </HomePage>
+
+
+    
     <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" ></script>
 
 <script

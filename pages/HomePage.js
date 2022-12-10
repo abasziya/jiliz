@@ -107,11 +107,11 @@ console.log(nav)
       <p >{item.price}</p>
       <p >{item.category}</p>
 
-      <div className={styles.overley }>
+      {/* <div className={styles.overley }>
       
       <p  >{item.description}</p>
  
-      </div>
+      </div> */}
 
       
       
