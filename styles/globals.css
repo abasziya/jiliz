@@ -1141,3 +1141,81 @@ body {
 background-color: #F4F2F2;
 display: block;
 }
+.filteredli{
+  display: none;
+}
+.filteredliblock{
+  display: inline-table;
+  height: 100%;
+    background-color: #ffff;
+width: 100%;
+
+}
+.filteritemdiv{
+  display: flex;
+    width: 82%;
+    height: 80%;
+    margin-top: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+.fillterdiv{
+  border-top: 5px solid #009893;
+  overflow: hidden;
+  display: flex;
+  width: 82%;
+  border-radius: 15px;
+  margin-right: 72px;
+  margin-top: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.listed-filtered-item{
+  line-height: 32px;
+  background-color: #FFFFFF;
+}
+
+.fillterdivbutton {
+  
+  margin-top: 97px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.filterbutton{
+
+  background-color: #F8F8F8;
+  color: #009893;
+  border: none;
+  padding: 10px;
+}
+.filterbutton:active{
+
+  background-color: #FFFFFF;
+  color: #009893;
+  border: none;
+  padding: 10px;
+}
+.filterbuttonactive{
+
+  background-color: #FFFFFF;
+  color: #009893;
+  border: none;
+  padding: 10px;
+}
+.filtersection{
+  background-color: #EFEFEF;
+ 
+}
+.right-filtered{
+  border-left: 1px solid #909096;
+  height: 378px;
+  margin-right: 50px;
+}
+.left-filtered{
+  margin-right: 50px;
+}
